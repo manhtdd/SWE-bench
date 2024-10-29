@@ -10,3 +10,4 @@
 apt update
 apt install gh -y
 gh auth login --with-token < mytoken.txt
+pip install -e .
