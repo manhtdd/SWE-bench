@@ -4,26 +4,27 @@
 # Usage make_repo.sh {gh organization}/{gh repository}
 
 # Abort on error
-set -euo pipefail
-
 REPO_TARGET=$1
 
 # Check if the target repository exists
+echo "gh repo view "$REPO_TARGET" > /dev/null || exit 1"
 gh repo view "$REPO_TARGET" > /dev/null || exit 1
 
 # Set the organization and repository names
-ORG_NAME="swe-bench"
+ORG_NAME="manhtdd"
 NEW_REPO_NAME="${REPO_TARGET//\//__}"
 
 # Check if the new repository already exists
+echo "gh repo view "$ORG_NAME/$NEW_REPO_NAME" > /dev/null 2>&1"
 gh repo view "$ORG_NAME/$NEW_REPO_NAME" > /dev/null 2>&1
 if [ $? -eq 0 ]; then
     echo "The repository $ORG_NAME/$NEW_REPO_NAME already exists."
     exit 1
-else
-    # Create mirror repository
-    gh repo create "$ORG_NAME/$NEW_REPO_NAME" --private
 fi
+
+# Create mirror repository
+echo "gh repo create $ORG_NAME/$NEW_REPO_NAME --private"
+gh repo create "$ORG_NAME/$NEW_REPO_NAME" --private
 
 # Check if the repository creation was successful
 if [ $? -eq 0 ]; then
