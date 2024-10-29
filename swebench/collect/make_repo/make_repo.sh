@@ -49,7 +49,7 @@ git clone --bare https://github.com/$REPO_TARGET.git "$TARGET_REPO_DIR"
 
 # Push files to the mirror repository
 echo "** Performing mirror push of files to $ORG_NAME/$NEW_REPO_NAME..."
-cd "$TARGET_REPO_DIR"; git push --mirror https://github.com/$ORG_NAME/$NEW_REPO_NAME.git
+cd "$TARGET_REPO_DIR"; git push --mirror https://manhtdd:$2@github.com/$ORG_NAME/$NEW_REPO_NAME.git
 
 # Remove the target repository
 cd ..; rm -rf "$TARGET_REPO_DIR"
