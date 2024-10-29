@@ -55,7 +55,7 @@ cd "$TARGET_REPO_DIR"; git push --mirror https://manhtdd:$2@github.com/$ORG_NAME
 cd ..; rm -rf "$TARGET_REPO_DIR"
 
 # Clone the mirror repository
-git clone https://github.com/$ORG_NAME/$NEW_REPO_NAME.git
+git clone https://manhtdd:$2@github.com/$ORG_NAME/$NEW_REPO_NAME.git
 
 # Delete .github/workflows if it exists
 if [ -d "$NEW_REPO_NAME/.github/workflows" ]; then
