@@ -4,7 +4,9 @@
 # Usage: make_repo.sh {gh organization}/{gh repository}
 
 # Abort on error
-REPO_TARGET=$1
+TOKEN=$1
+REPO_TARGET=$2
+DESIRED_BRANCH=$3
 
 # Check if the target repository exists
 echo "gh repo view $REPO_TARGET > /dev/null || exit 1"
@@ -49,13 +51,13 @@ git clone --bare https://github.com/$REPO_TARGET.git "$TARGET_REPO_DIR"
 
 # Push files to the mirror repository
 echo "** Performing mirror push of files to $ORG_NAME/$NEW_REPO_NAME..."
-cd "$TARGET_REPO_DIR"; git push --mirror https://manhtdd:$2@github.com/$ORG_NAME/$NEW_REPO_NAME.git
+cd "$TARGET_REPO_DIR"; git push --mirror https://manhtdd:$TOKEN@github.com/$ORG_NAME/$NEW_REPO_NAME.git
 
 # Remove the target repository
 cd ..; rm -rf "$TARGET_REPO_DIR"
 
 # Clone the mirror repository
-git clone https://manhtdd:$2@github.com/$ORG_NAME/$NEW_REPO_NAME.git
+git clone https://manhtdd:$TOKEN@github.com/$ORG_NAME/$NEW_REPO_NAME.git
 
 # Delete .github/workflows if it exists
 if [ -d "$NEW_REPO_NAME/.github/workflows" ]; then
@@ -66,7 +68,7 @@ if [ -d "$NEW_REPO_NAME/.github/workflows" ]; then
     cd "$NEW_REPO_NAME";
     git add -A;
     git commit -m "Removed .github/workflows";
-    git push origin 4.x;  # Change 'main' to your desired branch
+    git push origin $DESIRED_BRANCH;  # Change 'main' to your desired branch
     cd ..;
 else
     echo "$REPO_NAME/.github/workflows does not exist. No action required."
