@@ -63,7 +63,7 @@ class TestbedContextManager:
         self.log_dir = log_dir
         self.timeout = timeout
         # self.subprocess_args = {"check": True, "stdout": subprocess.DEVNULL, "stderr": subprocess.DEVNULL}
-        self.subprocess_args = {"check": True}
+        self.subprocess_args = {"check": True, "executable": "bin/bash"}
 
         # Create log, temp directories if they don't exist
         if not os.path.exists(self.log_dir):
