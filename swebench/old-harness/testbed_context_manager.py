@@ -135,7 +135,7 @@ class TestbedContextManager:
 
             # Install Miniconda
             install_cmd = f"bash {miniconda_sh} -b -u -p {self.path_conda}"
-            self._run_command(install)
+            self._run_command(install_cmd)
 
             # Clean up the installer
             os.remove(miniconda_sh)
@@ -277,8 +277,9 @@ class TestbedContextManager:
                     logger_testbed.info(f"[Testbed] Removed {version} version from repo {repo} (Install instructions not given)")
                     del group[version]
 
-    def __exit__(self):
-        if self.temp_dir_work is not None:
-            self.temp_dir_work.cleanup()
-        if self.temp_dir_conda is not None:
-            self.temp_dir_conda.cleanup()
+    def __exit__(self, exc_type, exc_value, exc_traceback):
+        # if self.temp_dir_work is not None:
+        #     self.temp_dir_work.cleanup()
+        # if self.temp_dir_conda is not None:
+        #     self.temp_dir_conda.cleanup()
+        pass
