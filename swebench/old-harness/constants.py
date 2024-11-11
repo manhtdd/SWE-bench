@@ -441,7 +441,7 @@ MAP_REPO_TO_TEST_FRAMEWORK = {
     "sphinx-doc/sphinx": "tox -epy39 -v --",
     "sqlfluff/sqlfluff": TEST_PYTEST,
     "sympy/sympy": "bin/test -C --verbose",
-    "keras-team/keras": "pytest pytest keras/src/applications"
+    "keras-team/keras": "pytest keras/src/applications"
 }
 
 # Constants - Task Instance Version Extraction
