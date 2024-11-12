@@ -153,7 +153,7 @@ parse_log_pyvista = parse_log_pytest
 parse_log_requests = parse_log_pytest
 parse_log_sqlfluff = parse_log_pytest
 parse_log_xarray = parse_log_pytest
-
+parse_log_keras = parse_log_pytest
 parse_log_astropy = parse_log_pytest_v2
 parse_log_scikit = parse_log_pytest_v2
 parse_log_sphinx = parse_log_pytest_v2
@@ -178,4 +178,5 @@ MAP_REPO_TO_PARSER = {
     "sqlfluff/sqlfluff": parse_log_sqlfluff,
     "sphinx-doc/sphinx": parse_log_sphinx,
     "sympy/sympy": parse_log_sympy,
+    "keras-team/keras": parse_log_keras,
 }
