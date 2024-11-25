@@ -14,7 +14,7 @@ gh repo view "$REPO_TARGET" > /dev/null || exit 1
 
 # Set the organization and repository names
 ORG_NAME="manhtdd"
-NEW_REPO_NAME="${REPO_TARGET//\//__}"
+NEW_REPO_NAME="$(basename "$REPO_TARGET")__$(basename "$REPO_TARGET")"
 
 # Check if the new repository already exists
 echo "gh repo view $ORG_NAME/$NEW_REPO_NAME > /dev/null 2>&1"
