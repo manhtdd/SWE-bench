@@ -236,11 +236,17 @@ def clone_repo(repo_name: str, path: str) -> bool:
         if not token:
             print("Error: GITHUB_TOKEN is not set in environment.")
             return False
+        
+        # Split the string by '/' and take the last part
+        project_name = repo_name.split("/")[-1]
+
+        # Create the desired format
+        result = f"{project_name}__{project_name}"
 
         # Construct the repository URL using the token
         repo_url = (
             f"https://{token}@github.com/manhtdd/"
-            + repo_name.replace("/", "__")
+            + result
             + ".git"
         )
         
