@@ -423,6 +423,50 @@ MAP_VERSION_TO_INSTALL_GYM = {
     ]    
 }
 
+MAP_VERSION_TO_INSTALL_GRADIO = {
+    k: {
+        "python": "3.10",
+        "install": "pip install -e .",
+        "packages": "requirements.txt"
+    }
+    for k in [
+        "0.24.1"
+    ]    
+}
+
+MAP_VERSION_TO_INSTALL_FAIRSEQ = {
+    k: {
+        "python": "3.10",
+        "install": "pip install -e .",
+        "packages": "requirements.txt"
+    }
+    for k in [
+        "0.24.1"
+    ]    
+}
+
+MAP_VERSION_TO_INSTALL_SPACY = {
+    k: {
+        "python": "3.10",
+        "install": "pip install -e .",
+        "packages": "requirements.txt"
+    }
+    for k in [
+        "0.24.1"
+    ]    
+}
+
+MAP_VERSION_TO_INSTALL_PLIGHTNING = {
+    k: {
+        "python": "3.10",
+        "install": "pip install -e .",
+        "packages": "requirements.txt"
+    }
+    for k in [
+        "0.24.1"
+    ]    
+}
+
 # Constants - Task Instance Instllation Environment
 MAP_VERSION_TO_INSTALL = {
     "astropy/astropy": MAP_VERSION_TO_INSTALL_ASTROPY,
@@ -449,6 +493,10 @@ MAP_VERSION_TO_INSTALL = {
     "hpcaitech/ColossalAI": MAP_VERSION_TO_INSTALL_COLOSSALAI,
     "microsoft/DeepSpeed": MAP_VERSION_TO_INSTALL_DEEPSPEED,
     "openai/gym": MAP_VERSION_TO_INSTALL_GYM,
+    "gradio-app/gradio": MAP_VERSION_TO_INSTALL_GRADIO,
+    "facebookresearch/fairseq": MAP_VERSION_TO_INSTALL_FAIRSEQ,
+    "explosion/spaCy": MAP_VERSION_TO_INSTALL_SPACY,
+    "Lightning-AI/pytorch-lightning": MAP_VERSION_TO_INSTALL_PLIGHTNING,
 }
 
 # Constants - Repository Specific Installation Instructions
@@ -479,7 +527,12 @@ MAP_REPO_TO_TEST_FRAMEWORK = {
     "sympy/sympy": "bin/test -C --verbose",
     "keras-team/keras": TEST_PYTEST,
     "hpcaitech/ColossalAI": TEST_PYTEST,
-    "microsoft/DeepSpeed": TEST_PYTEST
+    "microsoft/DeepSpeed": TEST_PYTEST,
+    "openai/gym": TEST_PYTEST,
+    "gradio-app/gradio": TEST_PYTEST,
+    "facebookresearch/fairseq": TEST_PYTEST,
+    "explosion/spaCy": TEST_PYTEST,
+    "Lightning-AI/pytorch-lightning": TEST_PYTEST,
 }
 
 # Constants - Task Instance Version Extraction
@@ -550,6 +603,10 @@ MAP_REPO_TO_REQS_PATHS = {
     "hpcaitech/ColossalAI": ["requirements/requirements.txt"],
     "microsoft/DeepSpeed": ["requirements/requirements.txt"],
     "openai/gym": ["requirements.txt"],
+    "gradio-app/gradio": ["requirements.txt"],
+    "facebookresearch/fairseq": ["examples/multilingual/data_scripts/requirement.txt"],
+    "explosion/spaCy": ["requirements.txt"],
+    "Lightning-AI/pytorch-lightning": ["requirements.txt"],
 }
 
 # Constants - Task Instance environment.yml File Paths
