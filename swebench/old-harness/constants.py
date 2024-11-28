@@ -441,7 +441,7 @@ MAP_VERSION_TO_INSTALL_FAIRSEQ = {
         "packages": "requirements.txt"
     }
     for k in [
-        "0.24.1"
+        "v0.12.3"
     ]    
 }
 
@@ -452,7 +452,7 @@ MAP_VERSION_TO_INSTALL_SPACY = {
         "packages": "requirements.txt"
     }
     for k in [
-        "0.24.1"
+        "4.0.0.dev3", "v3.3.1", "v3.0.7", "v2.3.3"
     ]    
 }
 
@@ -463,7 +463,7 @@ MAP_VERSION_TO_INSTALL_PLIGHTNING = {
         "packages": "requirements.txt"
     }
     for k in [
-        "0.24.1"
+        "1.2.10", "1.7.6", "1.1.8", "2.4.0", "1.9.5", "1.4.8"
     ]    
 }
 
