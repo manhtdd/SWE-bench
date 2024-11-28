@@ -390,6 +390,17 @@ MAP_VERSION_TO_INSTALL_KERAS = {
     ]    
 }
 
+MAP_VERSION_TO_INSTALL_COLOSSALAI = {
+    k: {
+        "python": "3.10",
+        "install": "pip install -e .",
+        "packages": "requirements.txt"
+    }
+    for k in [
+        "v0.4.6"
+    ]    
+}
+
 # Constants - Task Instance Instllation Environment
 MAP_VERSION_TO_INSTALL = {
     "astropy/astropy": MAP_VERSION_TO_INSTALL_ASTROPY,
@@ -413,6 +424,7 @@ MAP_VERSION_TO_INSTALL = {
     "sqlfluff/sqlfluff": MAP_VERSION_TO_INSTALL_SQLFLUFF,
     "sympy/sympy": MAP_VERSION_TO_INSTALL_SYMPY,
     "keras-team/keras": MAP_VERSION_TO_INSTALL_KERAS,
+    "hpcaitech/ColossalAI": MAP_VERSION_TO_INSTALL_COLOSSALAI,
 }
 
 # Constants - Repository Specific Installation Instructions
@@ -441,7 +453,8 @@ MAP_REPO_TO_TEST_FRAMEWORK = {
     "sphinx-doc/sphinx": "tox -epy39 -v --",
     "sqlfluff/sqlfluff": TEST_PYTEST,
     "sympy/sympy": "bin/test -C --verbose",
-    "keras-team/keras": TEST_PYTEST
+    "keras-team/keras": TEST_PYTEST,
+    "hpcaitech/ColossalAI": TEST_PYTEST
 }
 
 # Constants - Task Instance Version Extraction
@@ -509,6 +522,7 @@ MAP_REPO_TO_REQS_PATHS = {
     "sqlfluff/sqlfluff": ["requirements_dev.txt"],
     "sympy/sympy": ["requirements-dev.txt"],
     "keras-team/keras": ["requirements.txt"],
+    "hpcaitech/ColossalAI": ["requirements/requirements.txt"],
 }
 
 # Constants - Task Instance environment.yml File Paths
