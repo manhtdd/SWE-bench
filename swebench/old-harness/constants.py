@@ -401,6 +401,17 @@ MAP_VERSION_TO_INSTALL_COLOSSALAI = {
     ]    
 }
 
+MAP_VERSION_TO_INSTALL_DEEPSPEED = {
+    k: {
+        "python": "3.10",
+        "install": "pip install -e .",
+        "packages": "requirements.txt"
+    }
+    for k in [
+        "v0.16.0"
+    ]    
+}
+
 # Constants - Task Instance Instllation Environment
 MAP_VERSION_TO_INSTALL = {
     "astropy/astropy": MAP_VERSION_TO_INSTALL_ASTROPY,
@@ -425,6 +436,7 @@ MAP_VERSION_TO_INSTALL = {
     "sympy/sympy": MAP_VERSION_TO_INSTALL_SYMPY,
     "keras-team/keras": MAP_VERSION_TO_INSTALL_KERAS,
     "hpcaitech/ColossalAI": MAP_VERSION_TO_INSTALL_COLOSSALAI,
+    "microsoft/DeepSpeed": MAP_VERSION_TO_INSTALL_DEEPSPEED,
 }
 
 # Constants - Repository Specific Installation Instructions
@@ -454,7 +466,8 @@ MAP_REPO_TO_TEST_FRAMEWORK = {
     "sqlfluff/sqlfluff": TEST_PYTEST,
     "sympy/sympy": "bin/test -C --verbose",
     "keras-team/keras": TEST_PYTEST,
-    "hpcaitech/ColossalAI": TEST_PYTEST
+    "hpcaitech/ColossalAI": TEST_PYTEST,
+    "microsoft/DeepSpeed": TEST_PYTEST
 }
 
 # Constants - Task Instance Version Extraction
@@ -523,6 +536,7 @@ MAP_REPO_TO_REQS_PATHS = {
     "sympy/sympy": ["requirements-dev.txt"],
     "keras-team/keras": ["requirements.txt"],
     "hpcaitech/ColossalAI": ["requirements/requirements.txt"],
+    "microsoft/DeepSpeed": ["requirements/requirements.txt"],
 }
 
 # Constants - Task Instance environment.yml File Paths
