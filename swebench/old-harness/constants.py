@@ -412,6 +412,17 @@ MAP_VERSION_TO_INSTALL_DEEPSPEED = {
     ]    
 }
 
+MAP_VERSION_TO_INSTALL_GYM = {
+    k: {
+        "python": "3.10",
+        "install": "pip install -e .",
+        "packages": "requirements.txt"
+    }
+    for k in [
+        "0.24.1"
+    ]    
+}
+
 # Constants - Task Instance Instllation Environment
 MAP_VERSION_TO_INSTALL = {
     "astropy/astropy": MAP_VERSION_TO_INSTALL_ASTROPY,
@@ -437,6 +448,7 @@ MAP_VERSION_TO_INSTALL = {
     "keras-team/keras": MAP_VERSION_TO_INSTALL_KERAS,
     "hpcaitech/ColossalAI": MAP_VERSION_TO_INSTALL_COLOSSALAI,
     "microsoft/DeepSpeed": MAP_VERSION_TO_INSTALL_DEEPSPEED,
+    "openai/gym": MAP_VERSION_TO_INSTALL_GYM,
 }
 
 # Constants - Repository Specific Installation Instructions
@@ -537,6 +549,7 @@ MAP_REPO_TO_REQS_PATHS = {
     "keras-team/keras": ["requirements.txt"],
     "hpcaitech/ColossalAI": ["requirements/requirements.txt"],
     "microsoft/DeepSpeed": ["requirements/requirements.txt"],
+    "openai/gym": ["requirements.txt"],
 }
 
 # Constants - Task Instance environment.yml File Paths
