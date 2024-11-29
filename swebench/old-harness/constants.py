@@ -430,7 +430,7 @@ MAP_VERSION_TO_INSTALL_GRADIO = {
         "packages": "requirements.txt"
     }
     for k in [
-        "0.24.1"
+        "@gradio/accordion@0.3.23-beta.5", "@gradio/accordion@0.4.4"
     ]    
 }
 
