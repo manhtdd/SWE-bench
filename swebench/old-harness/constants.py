@@ -427,7 +427,8 @@ MAP_VERSION_TO_INSTALL_GRADIO = {
     k: {
         "python": "3.10",
         "install": "pip install -e .",
-        "packages": "requirements.txt"
+        "packages": "requirements.txt",
+        "pip-package": "google google-api-python-client google-cloud wrapt"
     }
     for k in [
         "@gradio-accordion@0.3.23-beta.5" #, "@gradio-accordion@0.4.4"
