@@ -452,7 +452,7 @@ MAP_VERSION_TO_INSTALL_SPACY = {
         "packages": "requirements.txt"
     }
     for k in [
-        "4.0.0.dev3", "v3.3.1", "v3.0.7", "v2.3.3"
+        "4.0.0.dev3", "v3.3.1", "v3.0.7" #, "v2.3.3"
     ]    
 }
 
