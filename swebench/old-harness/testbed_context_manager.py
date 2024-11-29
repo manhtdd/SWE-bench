@@ -4,6 +4,7 @@ import subprocess
 from typing import List
 
 logging.basicConfig(
+    force=True,
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(funcName)s:%(lineno)d - %(message)s',
     handlers=[
