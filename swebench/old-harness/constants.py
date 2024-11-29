@@ -416,19 +416,7 @@ MAP_VERSION_TO_INSTALL_GYM = {
     k: {
         "python": "3.10",
         "install": "pip install -e .",
-        "packages": "requirements.txt",
-        "pre_install": [
-            "apt-get update",
-            "apt-get install -y swig",
-            "wget -q https://mujoco.org/download/mujoco210-linux-x86_64.tar.gz",
-            "mkdir -p $HOME/.mujoco",
-            "tar -xzf mujoco210-linux-x86_64.tar.gz -C $HOME/.mujoco",
-            "rm mujoco210-linux-x86_64.tar.gz",
-            "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/root/.mujoco/mujoco210/bin",
-            "sed -i 's/>=/==/g' requirements.txt",
-            "apt-get update && apt-get install -y gcc g++ libgl1-mesa-dev libosmesa6-dev libglew-dev patchelf"
-        ]
-
+        "packages": "requirements.txt"
     }
     for k in [
         "0.24.1"
