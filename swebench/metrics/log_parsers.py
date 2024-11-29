@@ -159,6 +159,7 @@ parse_log_scikit = parse_log_pytest_v2
 parse_log_sphinx = parse_log_pytest_v2
 parse_log_colossalai = parse_log_pytest_v2
 parse_log_fairseq = parse_log_pytest_v2
+parse_log_gradio = parse_log_pytest_v2
 
 
 MAP_REPO_TO_PARSER = {
@@ -183,4 +184,5 @@ MAP_REPO_TO_PARSER = {
     "keras-team/keras": parse_log_keras,
     "hpcaitech/ColossalAI": parse_log_colossalai,
     "facebookresearch/fairseq": parse_log_fairseq,
+    "gradio-app/gradio": parse_log_gradio,
 }
