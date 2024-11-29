@@ -157,6 +157,8 @@ parse_log_keras = parse_log_pytest_v2
 parse_log_astropy = parse_log_pytest_v2
 parse_log_scikit = parse_log_pytest_v2
 parse_log_sphinx = parse_log_pytest_v2
+parse_log_colossalai = parse_log_pytest_v2
+parse_log_fairseq = parse_log_pytest_v2
 
 
 MAP_REPO_TO_PARSER = {
@@ -179,4 +181,6 @@ MAP_REPO_TO_PARSER = {
     "sphinx-doc/sphinx": parse_log_sphinx,
     "sympy/sympy": parse_log_sympy,
     "keras-team/keras": parse_log_keras,
+    "hpcaitech/ColossalAI": parse_log_colossalai,
+    "facebookresearch/fairseq": parse_log_fairseq,
 }
