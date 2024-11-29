@@ -414,7 +414,7 @@ MAP_VERSION_TO_INSTALL_DEEPSPEED = {
 
 MAP_VERSION_TO_INSTALL_GYM = {
     k: {
-        "python": "3.10",
+        "python": "3.9",
         "install": "pip install -e .",
         "packages": "requirements.txt"
     }
@@ -603,7 +603,7 @@ MAP_REPO_TO_REQS_PATHS = {
     "keras-team/keras": ["requirements.txt"],
     "hpcaitech/ColossalAI": ["requirements/requirements.txt"],
     "microsoft/DeepSpeed": ["requirements/requirements.txt"],
-    "openai/gym": ["requirements.txt"],
+    "openai/gym": ["requirements.txt", "test_requirements"],
     "gradio-app/gradio": ["test/requirements.txt", "client/python/test/requirements.txt"],
     "facebookresearch/fairseq": ["examples/multilingual/data_scripts/requirement.txt"],
     "explosion/spaCy": ["requirements.txt"],
