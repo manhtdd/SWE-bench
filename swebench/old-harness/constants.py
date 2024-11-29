@@ -465,7 +465,7 @@ MAP_VERSION_TO_INSTALL_PLIGHTNING = {
         "packages": "requirements.txt"
     }
     for k in [
-        "1.2.10", "1.1.8", "2.4.0", "1.9.5", "1.4.8" #, "1.7.6"
+        "2.4.0", "1.9.5", "1.4.8" #, "1.7.6", "1.2.10", "1.1.8"
     ]    
 }
 
