@@ -200,6 +200,12 @@ class TestbedContextManager:
 
                 # Get setup reference instance
                 setup_ref_instance = version_to_setup_ref[version]
+                
+                # Install additional packages if specified
+                if "pip_packages" in install:
+                    cmd = f"source {path_activate} {env_name} && pip install {install['pip_packages']}"
+                    logger_testbed.info(f"[Testbed] Installing pip packages for {env_name}; Command: {cmd}")
+                    subprocess.run(cmd, shell=True, **self.subprocess_args)
 
                 # Create conda environment according to install instructinos
                 pkgs = install["packages"] if "packages" in install else ""
@@ -240,12 +246,6 @@ class TestbedContextManager:
                     # Create environment + install dependencies
                     cmd = f"{exec_cmd} create -n {env_name} python={install['python']} {pkgs} -y"
                     logger_testbed.info(f"[Testbed] Creating environment {env_name}; Command: {cmd}")
-                    subprocess.run(cmd, shell=True, **self.subprocess_args)
-
-                # Install additional packages if specified
-                if "pip_packages" in install:
-                    cmd = f"source {path_activate} {env_name} && pip install {install['pip_packages']}"
-                    logger_testbed.info(f"[Testbed] Installing pip packages for {env_name}; Command: {cmd}")
                     subprocess.run(cmd, shell=True, **self.subprocess_args)
 
         return self
