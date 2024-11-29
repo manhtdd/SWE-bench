@@ -603,7 +603,7 @@ MAP_REPO_TO_REQS_PATHS = {
     "hpcaitech/ColossalAI": ["requirements/requirements.txt"],
     "microsoft/DeepSpeed": ["requirements/requirements.txt"],
     "openai/gym": ["requirements.txt"],
-    "gradio-app/gradio": ["requirements.txt, requirements-oauth.txt"],
+    "gradio-app/gradio": ["requirements.txt", "requirements-oauth.txt"],
     "facebookresearch/fairseq": ["examples/multilingual/data_scripts/requirement.txt"],
     "explosion/spaCy": ["requirements.txt"],
     "Lightning-AI/pytorch-lightning": ["requirements.txt"],
