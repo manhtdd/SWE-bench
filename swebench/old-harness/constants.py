@@ -416,7 +416,8 @@ MAP_VERSION_TO_INSTALL_GYM = {
     k: {
         "python": "3.9",
         "install": "pip install -e .",
-        "packages": "requirements.txt"
+        "packages": "requirements.txt",
+        "pip-package": "numpy"
     }
     for k in [
         "0.24.1"
