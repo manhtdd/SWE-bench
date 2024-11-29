@@ -462,7 +462,8 @@ MAP_VERSION_TO_INSTALL_PLIGHTNING = {
     k: {
         "python": "3.10",
         "install": "pip install -e .",
-        "packages": "requirements.txt"
+        "packages": "requirements.txt",
+        "pip-package": "google google-api-python-client google-cloud wrapt"
     }
     for k in [
         "2.4.0", "1.9.5", "1.4.8" #, "1.7.6", "1.2.10", "1.1.8"
