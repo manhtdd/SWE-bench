@@ -448,9 +448,10 @@ MAP_VERSION_TO_INSTALL_FAIRSEQ = {
 
 MAP_VERSION_TO_INSTALL_SPACY = {
     k: {
-        "python": "3.10",
+        "python": "3.9",
         "install": "pip install -e .",
-        "packages": "requirements.txt"
+        "packages": "requirements.txt",
+        "pip-package": "numpy==1.15.0 google google-api-python-client google-cloud wrapt"
     }
     for k in [
         "4.0.0.dev3", "v3.3.1", "v3.0.7" #, "v2.3.3"
