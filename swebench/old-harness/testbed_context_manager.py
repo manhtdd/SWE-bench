@@ -4,7 +4,11 @@ import subprocess
 from typing import List
 
 logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(funcName)s:%(lineno)d - %(message)s',
+    handlers=[
+        logging.StreamHandler()
+    ]
 )
 logger_testbed = logging.getLogger("testbed_context_manager")
 
