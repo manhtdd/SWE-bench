@@ -443,7 +443,7 @@ MAP_VERSION_TO_INSTALL_GRADIO = {
 
 MAP_VERSION_TO_INSTALL_FAIRSEQ = {
     k: {
-        "python": "3.10",
+        "python": "3.0",
         "install": "pip install -e .",
         "packages": "requirements.txt"
     }
