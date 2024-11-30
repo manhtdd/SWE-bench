@@ -445,7 +445,8 @@ MAP_VERSION_TO_INSTALL_FAIRSEQ = {
     k: {
         "python": "3.9",
         "install": "pip install -e .",
-        "packages": "requirements.txt"
+        "packages": "requirements.txt",
+        "pre_install": ["echo \"omegaconf==2.0.0\" >> ./examples/multilingual/data_scripts/requirement.txt"]
     }
     for k in [
         "v0.12.3"
