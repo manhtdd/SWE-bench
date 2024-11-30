@@ -446,7 +446,7 @@ MAP_VERSION_TO_INSTALL_FAIRSEQ = {
         "python": "3.9",
         "install": "pip install -e .",
         "packages": "requirements.txt",
-        "pre_install": ["echo \"omegaconf==2.0.0\" >> ./examples/multilingual/data_scripts/requirement.txt"]
+        "pre_install": ["sed -i 's/omegaconf<2.1/omegaconf==2.0.0/; s/torch>=1.10/torch==0.4/' setup.py"]
     }
     for k in [
         "v0.12.3"
