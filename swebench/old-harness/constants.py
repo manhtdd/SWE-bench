@@ -443,7 +443,7 @@ MAP_VERSION_TO_INSTALL_GRADIO = {
 
 MAP_VERSION_TO_INSTALL_FAIRSEQ = {
     k: {
-        "python": "3.9",
+        "python": "2.7",
         "install": "pip install -e .",
         "packages": "requirements.txt",
         "pre_install": ["sed -i 's/omegaconf<2.1/omegaconf==2.0.0/; s/torch>=1.10/torch==0.4/' setup.py"]
