@@ -459,8 +459,7 @@ MAP_VERSION_TO_INSTALL_SPACY = {
         "install": "pip install -e .",
         "packages": "requirements.txt",
         "pip-package": "google google-api-python-client google-cloud wrapt",
-        "pre_install": ["sudo apt update && sudo apt install software-properties-common",
-                        "sudo add-apt-repository ppa:deadsnakes/ppa",
+        "pre_install": ["sudo add-apt-repository ppa:deadsnakes/ppa -y",
                         "sudo apt update",
                         "sudo apt install build-essential python3.9-dev"]
     }
