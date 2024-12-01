@@ -418,11 +418,11 @@ MAP_VERSION_TO_INSTALL_GYM = {
         "install": "pip install -e .",
         "packages": "requirements.txt",
         "pip-package": "numpy",
-        "pre_install": [
-            "apt-get update && apt-get install -y unzip libglu1-mesa-dev libgl1-mesa-dev libosmesa6-dev xvfb patchelf ffmpeg cmake swig",
-            "mkdir /root/.mujoco && cd /root/.mujoco  && wget https://github.com/deepmind/mujoco/releases/download/2.1.0/mujoco210-linux-x86_64.tar.gz && tar -xf mujoco210-linux-x86_64.tar.gz",
-            "LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/root/.mujoco/mujoco210/bin",
-        ],
+        # "pre_install": [
+        #     "apt-get update && apt-get install -y unzip libglu1-mesa-dev libgl1-mesa-dev libosmesa6-dev xvfb patchelf ffmpeg cmake swig",
+        #     "mkdir /root/.mujoco && cd /root/.mujoco  && wget https://github.com/deepmind/mujoco/releases/download/2.1.0/mujoco210-linux-x86_64.tar.gz && tar -xf mujoco210-linux-x86_64.tar.gz",
+        #     "LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/root/.mujoco/mujoco210/bin",
+        # ],
     }
     for k in [
         "0.24.1"

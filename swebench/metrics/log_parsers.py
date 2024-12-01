@@ -185,4 +185,6 @@ MAP_REPO_TO_PARSER = {
     "hpcaitech/ColossalAI": parse_log_colossalai,
     "facebookresearch/fairseq": parse_log_fairseq,
     "gradio-app/gradio": parse_log_gradio,
+    'Lightning-AI/pytorch-lightning': parse_log_pytest_v2,
+    'explosion/spaCy': parse_log_pytest_v2
 }
