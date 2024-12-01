@@ -456,12 +456,9 @@ MAP_VERSION_TO_INSTALL_FAIRSEQ = {
 MAP_VERSION_TO_INSTALL_SPACY = {
     k: {
         "python": "3.9",
-        "install": "pip install -e .",
+        "install": "apt install build-essential && pip install -e .",
         "packages": "requirements.txt",
         "pip-package": "google google-api-python-client google-cloud wrapt",
-        "pre_install": ["add-apt-repository ppa:deadsnakes/ppa -y",
-                        "apt-get update",
-                        "apt-get install build-essential python3.9-dev -y"]
     }
     for k in [
         "4.0.0.dev3", "v3.3.1", "v3.0.7" #, "v2.3.3"
