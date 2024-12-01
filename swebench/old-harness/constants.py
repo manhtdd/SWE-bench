@@ -456,7 +456,7 @@ MAP_VERSION_TO_INSTALL_FAIRSEQ = {
 MAP_VERSION_TO_INSTALL_SPACY = {
     k: {
         "python": "3.9",
-        "install": "apt install build-essential -y && pip install -e .",
+        "install": "apt install build-essential -y && pip install -e . && pip install numpy==1.26.4",
         "packages": "requirements.txt",
         "pip-package": "google google-api-python-client google-cloud wrapt",
     }
